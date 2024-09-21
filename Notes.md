@@ -17,5 +17,7 @@ Potential scenarios for mapping:
   2. Many to one (Many short urls <--> 1 long url)
   3. One to many (1 short url <--> Many long urls)
 
+Let's explore each scenario in more detail.
+
 
 
