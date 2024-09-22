@@ -24,8 +24,8 @@ Let's explore each scenario in more detail.
   3. Many long urls mapped to one short url: In this scenario, the program would encourter a problem. If the user were to click on their newly created short url, the system would see that it is mapped to numerous long urls, and would've know which website to display. Therefore, one short url may only map to one long url.
 
 **2 seperate component of the project**
-The first component of the project is to take care of is the mapping of the short url to the long url, and making sure that everything is mapped correctly, according to the details established in the previous section. 
 
-The second component is loading up the website with html.
+The first component of the project is to take care of is the mapping of the short url to the long url, and making sure that everything is mapped correctly according to the details established in the previous section. The second component is actually loading up the webpage via html. The disadvantage of this setup is that the user would have to store--in a database, text file, etc.--the connections of the map. If the user were to lose access to the map connections, then the program would not know which  short urls correspond to which long url.
+
 
 
