@@ -37,6 +37,23 @@ The first component of the project is to take care of is the mapping of the shor
 
 **Interface vs Implementation**
 
+*Interface*: Used to specify a specific set of functions or methods that a class should have, without actually implementing what the methods do. The interface only specifies what general behaviors that an object should have, but not actually how it is  implemented. 
+
+*Implementation*: The implementation "implements" the functions that are specified in the interface. However, whereas the interface only outlines what functions something should have, the implementation specifies what eachf function actually does. 
+
 
 **Abstractions (Indirection)**
+
+*Abstraction* is when we decide to hide or reveal certain functions of the program to the user such that when the user wants to perform an action, the program will execute that action, but may hide some background tasks from the user. The benefit of this is better readability of the code and a more simplified and streamlined user experience. 
+
+
+Sources: 
+
+https://docs.oracle.com/javase/tutorial/java/concepts/interface.html
+
+https://www.geeksforgeeks.org/interfaces-in-java/
+
+https://stackoverflow.com/questions/1321122/what-is-an-interface-in-java
+
+https://www.geeksforgeeks.org/abstraction-in-java-2/
 
