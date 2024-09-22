@@ -19,6 +19,8 @@ Potential scenarios for mapping:
 
 Let's explore each scenario in more detail.
 
+![One-to-one](![IMG_6458](https://github.com/user-attachments/assets/da998604-c00c-4a59-9aca-fb1ade8711b9)
+)
   1. One short url mapped to one long url: This is main function of the project - To be able to create a shorter alius of the longer url, and map them together so that the system knows which short url corresponds to which longer counterpart.
   2. Many short urls mapped to one long url: In some cases, the user of the URL Shortener may want to create numerous shortened urls that takes one to the same website. Therefore, this is a scenario that we must account for and allow.
   3. Many long urls mapped to one short url: In this scenario, the program would encourter a problem. If the user were to click on their newly created short url, the system would see that it is mapped to numerous long urls, and would've know which website to display. Therefore, one short url may only map to one long url.
