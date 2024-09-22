@@ -4,7 +4,7 @@
 
 The problem: Long URLs are too long, messy, and hard to remember.
 
-Our solution: Take any long URL input from the user and output a shorter URL that's easier to remember.
+Solution: Take any long URL input from the user and output a shorter URL that's easier to remember.
 
 
 **Mapping**
@@ -19,7 +19,13 @@ Potential scenarios for mapping:
 
 Let's explore each scenario in more detail.
 
-  1. One short url mapped to one long url.
-     This is main function of the projec.t 
+  1. One short url mapped to one long url: This is main function of the project - To be able to create a shorter alius of the longer url, and map them together so that the system knows which short url corresponds to which longer counterpart.
+  2. Many short urls mapped to one long url: In some cases, the user of the URL Shortener may want to create numerous shortened urls that takes one to the same website. Therefore, this is a scenario that we must account for and allow.
+  3. Many long urls mapped to one short url: In this scenario, the program would encourter a problem. If the user were to click on their newly created short url, the system would see that it is mapped to numerous long urls, and would've know which website to display. Therefore, one short url may only map to one long url.
+
+**2 seperate component of the project**
+The first component of the project is to take care of is the mapping of the short url to the long url, and making sure that everything is mapped correctly, according to the details established in the previous section. 
+
+The second component is loading up the website with html.
 
 
