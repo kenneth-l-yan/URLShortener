@@ -19,9 +19,7 @@ Potential scenarios for mapping:
 
 Let's explore each scenario in more detail.
 
-![Cat](https://ih1.redbubble.net/image.5428275630.7645/raf,360x360,075,t,fafafa:ca443f4786.jpg)
-
-
-https://ih1.redbubble.net/image.5428275630.7645/raf,360x360,075,t,fafafa:ca443f4786.jpg
+  1. One short url mapped to one long url.
+     This is main function of the projec.t 
 
 
