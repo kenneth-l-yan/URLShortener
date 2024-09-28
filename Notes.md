@@ -36,7 +36,7 @@ Let's explore each scenario in greater detail:
 ![IMG_17743EEB2681-1](https://github.com/user-attachments/assets/52787b0d-229b-43fd-821d-d7a8fe3beb59)
 
 
-The first component of the project is to take care of is the mapping of the short url to the long url, and making sure that everything is mapped correctly according to the details established in the previous section. The second component is actually loading up the webpage via html. The disadvantage of this setup is that the user would have to store--in a database, text file, etc.--the connections of the map. If the user were to lose access to the map connections, then the program would not know which  short urls correspond to which long url.
+The first component of the project is to take care of is the mapping of the short url to the long url, and making sure that everything is mapped correctly according to the details established in the previous section. The second component is actually loading up the webpage via http requests. The disadvantage of this setup is that the user would have to store--in a database, text file, etc.--the connections of the map. If the user were to lose access to the map connections, then the program would not know which  short urls correspond to which long url.
 
 **Interface vs Implementation**
 
