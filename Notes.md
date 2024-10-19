@@ -50,7 +50,7 @@ The first component of the project is to take care of is the mapping of the shor
 *Abstraction* is when we decide to hide or reveal certain functions of the program to the user such that when the user wants to perform an action, the program will execute that action, but may hide some background tasks from the user. The benefit of this is better readability of the code and a more simplified and streamlined user experience. 
 
 
-Sources: 
+Notes resources: 
 
 https://docs.oracle.com/javase/tutorial/java/concepts/interface.html
 
@@ -61,10 +61,14 @@ https://stackoverflow.com/questions/1321122/what-is-an-interface-in-java
 https://www.geeksforgeeks.org/abstraction-in-java-2/
 
 
-Resources that I used: 
+Server resources: 
 
 https://www.freecodecamp.org/news/html-css-and-javascript-explained-for-beginners/
 
 https://youtu.be/f3uCSh6LIY0?si=AI1b5bcQeeaFVz7Q
 
 https://youtu.be/W6NZfCO5SIk?si=OJDHcUuX6i4zc0X8
+
+Git resources:
+
+https://www.freecodecamp.org/news/error-src-refspec-master-does-not-match-any-how-to-fix-in-git/
