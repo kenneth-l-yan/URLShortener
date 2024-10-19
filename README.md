@@ -7,7 +7,4 @@ Open the folder with VSCode, and in the terminal, use the command: npm run devSt
 Then, in your browser, go to localhost:3000, localhost:3000/hello, or localhost:3000/shorten.
 
 
-Resources that I used: 
-https://www.freecodecamp.org/news/html-css-and-javascript-explained-for-beginners/
-https://youtu.be/f3uCSh6LIY0?si=AI1b5bcQeeaFVz7Q
-https://youtu.be/W6NZfCO5SIk?si=OJDHcUuX6i4zc0X8
+
