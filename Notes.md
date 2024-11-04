@@ -73,6 +73,38 @@ Git resources:
 
 https://www.freecodecamp.org/news/error-src-refspec-master-does-not-match-any-how-to-fix-in-git/
 
+
+
+**Git Notes:**
+
+git init (initialize a new git)
+
+ls -a (list out the files in directory)
+
+git remote add origin "html url of github repo"
+
+git clone "html url of github repo"
+
+git status
+
+git add "file.name"
+
+git add -A
+
+git commit -m "message" 
+
+git checkout -b master
+
+git push origin master
+
+
+**PostgrSQL Notes:**
+
+\l (List the database to the terminal)
+
+CREATE DATABASE "name of database";
+
+
 https://www.youtube.com/watch?v=8JJ101D3knE&t=194s
 
 https://www.youtube.com/watch?v=RGOj5yH7evk&t=180s&pp=ygUQbGVhcm4gZ2l0IGNvdXJzZQ%3D%3D
