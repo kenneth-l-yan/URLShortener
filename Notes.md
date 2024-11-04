@@ -74,19 +74,20 @@ Git resources:
 https://www.freecodecamp.org/news/error-src-refspec-master-does-not-match-any-how-to-fix-in-git/
 
 
+
 **Git Notes:**
 
 git init (initialize a new git)
 
 ls -a (list out the files in directory)
 
-git remote add origin <html url of github repo>
+git remote add origin "html url of github repo"
 
-git clone <html url of github repo>
+git clone "html url of github repo"
 
 git status
 
-git add <file.name>
+git add "file.name"
 
 git add -A
 
@@ -101,4 +102,4 @@ git push origin master
 
 \l (List the database to the terminal)
 
-CREATE DATABASE <name of database>;
+CREATE DATABASE "name of database";
