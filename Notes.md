@@ -63,11 +63,11 @@ https://www.geeksforgeeks.org/abstraction-in-java-2/
 
 Server resources: 
 
-https://www.freecodecamp.org/news/html-css-and-javascript-explained-for-beginners/
+https://expressjs.com/en/starter/hello-world.html
 
-https://youtu.be/f3uCSh6LIY0?si=AI1b5bcQeeaFVz7Q
+https://medium.com/@ralph1786/how-to-setup-an-express-server-5fd9cd9ae073
 
-https://youtu.be/W6NZfCO5SIk?si=OJDHcUuX6i4zc0X8
+https://youtu.be/SccSCuHhOw0?si=4h1gz2UdpA3cT_P4
 
 Git resources:
 
@@ -103,3 +103,8 @@ git push origin master
 \l (List the database to the terminal)
 
 CREATE DATABASE "name of database";
+
+
+https://www.youtube.com/watch?v=8JJ101D3knE&t=194s
+
+https://www.youtube.com/watch?v=RGOj5yH7evk&t=180s&pp=ygUQbGVhcm4gZ2l0IGNvdXJzZQ%3D%3D
