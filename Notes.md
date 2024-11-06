@@ -93,7 +93,9 @@ git add -A
 
 git commit -m "message" 
 
-git checkout -b master
+git branch -a
+
+git push -u origin main
 
 git push origin master
 
@@ -125,4 +127,6 @@ Dropping column from table: ALTER TABLE <table_name> DROP COLUMN <column_name>;
 
 Dropping a table: drop table <tableName>;
 
-
+Add entry: 
+INSERT INTO urls (longurl, shorturl) VALUES ('google.com', 'gg');
+INSERT INTO urls (longurl, shorturl) VALUES ('netflix.com', 'nflx');
