@@ -97,8 +97,6 @@ git branch -a
 
 git push -u origin main
 
-git push origin master
-
 
 **PostgrSQL Notes:**
 

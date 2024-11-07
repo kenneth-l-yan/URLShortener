@@ -8,7 +8,7 @@ Move into the url-shortener folder by typing this command into the terminal: cd 
 
 Install the dependencies using this command: npm install
 
-To run the server, run the command: npm run start
+To run the server, run the command: npm start
 
 By default, this server is hosted on localhost port 3000. So, navigate to your browser of choice and go to: localhost:3000
 

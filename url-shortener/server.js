@@ -17,11 +17,27 @@ app.get('/', async (req, res) => {
 
 // Get - returns all the urls stored in the database.
 app.get('/shorten', async (req, res) => {
-    const urlList = await db.query("select * from urls");
-    console.log(urlList);
-    res.status(200).json({ status: "success" });
+    try {
+        const result = await db.query("select * from urls");
+        console.log(result.rows);
+        res.status(200).json({ 
+            status: "success",
+            rowLength: result.rows.length,
+            urls: result.rows
+        });
+    } 
+    catch (error) {
+        res.status(500).json({status: "failed"});
+    }
 })
 
+// get - returns a single short url
+app.get('shorten/:id', async (req, res) => {
+    
+})
+
+
+// post - user submits an input (a url)
 app.post('/shorten', (req, res) => {
  
 })
