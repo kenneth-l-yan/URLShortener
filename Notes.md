@@ -128,3 +128,6 @@ Dropping a table: drop table <tableName>;
 Add entry: 
 INSERT INTO urls (longurl, shorturl) VALUES ('google.com', 'gg');
 INSERT INTO urls (longurl, shorturl) VALUES ('netflix.com', 'nflx');
+
+Updating an entry:
+UPDATE urls SET clicks = 3 WHERE id = 1;
