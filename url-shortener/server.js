@@ -1,14 +1,17 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const dotenv = require('dotenv');
-const db = require('./db');
-const PORT = process.env.PORT || 3000;
+import dotenv from "dotenv";
+dotenv.config();
+import { query } from "./db/index.js";
+import { nanoid } from "nanoid";
+import urlExist from "url-exist";
 
 // Register the view engine
-app.use(express.urlencoded({ extended: true}));
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
-// Middleware - allows us to use req.body
+// middleware
+
+app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 // Get - welcome route
@@ -19,53 +22,61 @@ app.get('/', async (req, res) => {
 // GET - returns all the urls stored in the database.
 app.get('/shorten', async (req, res) => {
     try {
-        const result = await db.query("SELECT * FROM urls");
-        console.log(result.rows);
+        const result = await query("SELECT * FROM urls");
         res.status(200).json({ 
             data: {
-                numberOfUrls: result.rows.length,
                 urls: result.rows
             }
         });
     } 
     catch (error) {
         res.status(500).json({
-            message: "failed"
+            message: "Error",
+            error: error
         });
     }
 })
 
-// GET - returns a single short url
-app.get('/shorten/:id', async (req, res) => {
+// GET - get single url
+app.get('/:urlId', async (req, res) => {
     try {
-        // increment clicks
-        const updateClicks = await db.query(`UPDATE urls SET clicks = clicks + 1 WHERE id = $1`, [req.params.id]);
-        // store the row
-        const result = await db.query(`SELECT * FROM urls WHERE id = $1`, [req.params.id]);
-
-        res.status(200).json({
-            data: {
-                url: result.rows[0],
-            }
-        })
-    } 
-    catch (error) {
-        res.json(error);
+        console.log(req.params);
+        const result = await query(`select * from urls where urls.shorturl = '${req.params.urlId}'`);
+        if(result.rows.length > 0) {
+            await query(`update urls set clicks = clicks + 1 where shorturl = '${req.params.urlId}';`);
+            res.redirect(result.rows[0].longurl);
+        } else {
+            res.status(404).json({message: "ShortID not found"});
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({message: "Error"});
     }
 })
 
 // POST - user submits an input (a url) and we add it to the database
+/* Input format:
+{
+    "input": "https://www.apple.com"
+}
+*/
 app.post('/shorten', async (req, res) => {
-    try {
-        const userInput = req.body.longurl;
+        const longInput = req.body.input;
+        const valid = await urlExist(longInput);
 
-
-        const results = await db.query(`INSERT INTO urls (longurl, shorturl, clicks) VALUES ('${req.body.longurl}', 'something', 0)`)
-       
-    } 
-    catch (error) {
-        
-    }
+        if (valid) {
+            try {
+                const shortUrl = nanoid(5);
+                console.log(shortUrl);
+                await query(`insert into urls (longurl, shorturl, clicks) values ('${longInput}', '${shortUrl}', 0);`);
+                res.status(201).json({ success: true, shortUrl});
+            } catch (error) {
+                console.log(error);
+                res.status(500).json({ success: false, error});
+            }
+        } else {
+            res.status(400).json( {success: false, message: "Not valid URL"});
+        }
 })
 
 
@@ -75,6 +86,7 @@ app.delete('/shorten/:id', (req, res) => {
 })
 
 // Tells express which port to listen on 
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
